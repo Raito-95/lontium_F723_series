@@ -1,0 +1,5 @@
+../Core/Src/rpr0521.c:14:19:RPR0521_Init	19
+../Core/Src/rpr0521.c:143:6:RPR0521_SetUp	1
+../Core/Src/rpr0521.c:151:10:RPR0521_ReadPS	1
+../Core/Src/rpr0521.c:165:26:WriteRegister	1
+../Core/Src/rpr0521.c:174:26:ReadRegister	1

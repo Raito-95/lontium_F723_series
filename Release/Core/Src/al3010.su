@@ -1,0 +1,6 @@
+../Core/Src/al3010.c:156:26:AL3010_WriteRegister	24	static
+../Core/Src/al3010.c:165:26:AL3010_ReadRegisters	24	static
+../Core/Src/al3010.c:25:19:AL3010_Init	24	static
+../Core/Src/al3010.c:93:19:AL3010_ReadData	16	static
+../Core/Src/al3010.c:112:19:AL3010_ReadData_ISR	16	static
+../Core/Src/al3010.c:137:6:ALS_SendReport_FS	0	static
