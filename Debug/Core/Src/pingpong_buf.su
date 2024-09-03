@@ -1,5 +1,0 @@
-../Core/Src/pingpong_buf.c:12:6:PingPongBuffer_Init	24	static
-../Core/Src/pingpong_buf.c:25:6:PingPongBuffer_GetReadBuf	16	static
-../Core/Src/pingpong_buf.c:49:6:PingPongBuffer_SetReadDone	16	static
-../Core/Src/pingpong_buf.c:60:6:PingPongBuffer_GetWriteBuf	16	static
-../Core/Src/pingpong_buf.c:74:6:PingPongBuffer_SetWriteDone	16	static

@@ -18,19 +18,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "dma.h"
 #include "i2c.h"
-#include "i2s.h"
-#include "spi.h"
 #include "usb_device.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "usbd_core.h"
-#include "ecx343.h"
-#include "rpr0521.h"
-#include "al3010.h"
 #include "lt7911ux.h"
 #include "usbd_cdc_if.h"
 /* USER CODE END Includes */
@@ -59,7 +53,7 @@ uint16_t sample_data[16];
 uint8_t pnl_ready = 0;
 uint8_t als_ready = 0;
 uint8_t ps_ready  = 0;
-extern USBD_HandleTypeDef hUsbDeviceFS;
+extern USBD_HandleTypeDef hUsbDeviceHS;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -72,9 +66,9 @@ void MPU_Config(void);
 /* USER CODE BEGIN 0 */
 void boot_UserDFU(void)
 {
-    USBD_Stop(&hUsbDeviceFS);
+    USBD_Stop(&hUsbDeviceHS);
     HAL_Delay(100);
-    USBD_DeInit(&hUsbDeviceFS);
+    USBD_DeInit(&hUsbDeviceHS);
     HAL_Delay(100);
 
     SCB_DisableICache();
@@ -133,14 +127,7 @@ int main(void)
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
-   MPU_Config();
 
-   /* Enable I-Cache---------------------------------------------------------*/
-   SCB_EnableICache();
-
-   /* Enable D-Cache---------------------------------------------------------*/
-   SCB_EnableDCache();
-   /* MCU Configuration--------------------------------------------------------*/
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
 
@@ -159,11 +146,6 @@ int main(void)
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
   MX_I2C3_Init();
-  MX_SPI2_Init();
-  MX_SPI4_Init();
-  MX_I2C1_Init();
-  MX_I2S3_Init();
-  MX_DMA_Init();
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(ALS_RST_GPIO_Port, ALS_RST_Pin, GPIO_PIN_SET);
   HAL_Delay(100);
@@ -416,25 +398,6 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-    if(ALS_INT_Pin == GPIO_Pin)
-    {
-        als_ready = 1;
-    }
-    else if(PS_INT_Pin == GPIO_Pin)
-    {
-        ps_ready = 1;
-    }
-}
-
-void HAL_I2S_RxCpltCallback(I2S_HandleTypeDef *hi2s)
-{
-  for (uint8_t i = 0; i < sizeof(i2s_data)/4 ; i++) {
-      sample_data[i] = i2s_data[i*2];
-  }
-
-}
 void MPU_Config(void)
 {
   MPU_Region_InitTypeDef MPU_InitStruct = {0};

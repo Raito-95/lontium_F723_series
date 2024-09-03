@@ -34,16 +34,16 @@ void LT7911_Init( void)
 
 }
 
-void LT7911_ModeSwitch()
-{
-    uint8_t mode;
-
-//    mode = HAL_GPIO_ReadPin( SW_KEY_2D3D_GPIO_Port, SW_KEY_2D3D_Pin);
-
-//    HAL_GPIO_WritePin( SW_BRG_2D3D_GPIO_Port, SW_BRG_2D3D_Pin, mode);
-    HAL_Delay(12);
-
-}
+//void LT7911_ModeSwitch()
+//{
+//    uint8_t mode;
+//
+////    mode = HAL_GPIO_ReadPin( SW_KEY_2D3D_GPIO_Port, SW_KEY_2D3D_Pin);
+//
+////    HAL_GPIO_WritePin( SW_BRG_2D3D_GPIO_Port, SW_BRG_2D3D_Pin, mode);
+//    HAL_Delay(12);
+//
+//}
 
 HAL_StatusTypeDef HDMI_WriteI2C_Byte( uint16_t addr, uint8_t buf)
 {

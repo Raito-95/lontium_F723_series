@@ -91,7 +91,7 @@
   */
 
 /** CDC Interface callback. */
-extern USBD_CDC_ItfTypeDef USBD_Interface_fops_FS;
+extern USBD_CDC_ItfTypeDef USBD_Interface_fops_HS;
 
 /* USER CODE BEGIN EXPORTED_VARIABLES */
 extern uint8_t UserTxBufferFS[APP_TX_DATA_SIZE];
@@ -107,7 +107,7 @@ extern bool CDC_Echo_Ctrl_Flag;
   * @{
   */
 
-uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
+uint8_t CDC_Transmit_HS(uint8_t* Buf, uint16_t Len);
 
 /* USER CODE BEGIN EXPORTED_FUNCTIONS */
 
@@ -131,4 +131,3 @@ uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
 
 #endif /* __USBD_CDC_IF_H__ */
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
