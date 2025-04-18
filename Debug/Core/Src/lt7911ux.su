@@ -14,7 +14,7 @@
 ../Core/Src/lt7911ux.c:548:6:LT7911_WriteCRC	24	static
 ../Core/Src/lt7911ux.c:591:6:LT7911_ReadbackAllFlash	88	static
 ../Core/Src/lt7911ux.c:684:6:lt7911_firmware_update_init	16	static
-../Core/Src/lt7911ux.c:784:14:BitsReverse	24	static
-../Core/Src/lt7911ux.c:807:14:GetCRC	40	static
-../Core/Src/lt7911ux.c:850:17:lt7911uxc_get_crc	72	static
-../Core/Src/lt7911ux.c:874:6:lt7911uxc_version	16	static
+../Core/Src/lt7911ux.c:783:14:BitsReverse	24	static
+../Core/Src/lt7911ux.c:806:14:GetCRC	40	static
+../Core/Src/lt7911ux.c:849:17:lt7911uxc_get_crc	72	static
+../Core/Src/lt7911ux.c:873:6:lt7911uxc_version	16	static

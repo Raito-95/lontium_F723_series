@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (11.3.rel1)
+# Toolchain: GNU Tools for STM32 (13.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -38,40 +38,40 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := TEST_F723
+BUILD_ARTIFACT_NAME := lontium_F723_series
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-TEST_F723.elf \
+lontium_F723_series.elf \
 
 MAP_FILES += \
-TEST_F723.map \
+lontium_F723_series.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-TEST_F723.list \
+lontium_F723_series.list \
 
 OBJCOPY_HEX += \
-TEST_F723.hex \
+lontium_F723_series.hex \
 
 OBJCOPY_BIN += \
-TEST_F723.bin \
+lontium_F723_series.bin \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: TEST_F723.elf secondary-outputs
+main-build: lontium_F723_series.elf secondary-outputs
 
 # Tool invocations
-TEST_F723.elf TEST_F723.map: $(OBJS) $(USER_OBJS) C:\Users\User\Downloads\Work_Programs\STM32\TEST_F723\STM32F723VEYX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "TEST_F723.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\User\Downloads\Work_Programs\STM32\TEST_F723\STM32F723VEYX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TEST_F723.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+lontium_F723_series.elf lontium_F723_series.map: $(OBJS) $(USER_OBJS) C:\Users\User\STM32CubeIDE\workspace\lontium_F723_series\STM32F723VEYX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "lontium_F723_series.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\User\STM32CubeIDE\workspace\lontium_F723_series\STM32F723VEYX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lontium_F723_series.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -80,24 +80,24 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-TEST_F723.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "TEST_F723.list"
+lontium_F723_series.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "lontium_F723_series.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-TEST_F723.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "TEST_F723.hex"
+lontium_F723_series.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "lontium_F723_series.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-TEST_F723.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "TEST_F723.bin"
+lontium_F723_series.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "lontium_F723_series.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) TEST_F723.bin TEST_F723.elf TEST_F723.hex TEST_F723.list TEST_F723.map default.size.stdout
+	-$(RM) default.size.stdout lontium_F723_series.bin lontium_F723_series.elf lontium_F723_series.hex lontium_F723_series.list lontium_F723_series.map
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX) $(OBJCOPY_BIN)

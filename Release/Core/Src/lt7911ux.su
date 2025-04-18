@@ -9,9 +9,9 @@
 ../Core/Src/lt7911ux.c:158:19:LT7911_ReadHDCPKey	280	static
 ../Core/Src/lt7911ux.c:272:19:LT7911_WriteHDCPKey	24	static
 ../Core/Src/lt7911ux.c:352:6:LT7911_BlockErase	8	static
-../Core/Src/lt7911ux.c:478:6:LT7911_ReadbackFirmware	80	static
+../Core/Src/lt7911ux.c:478:6:LT7911_ReadbackFirmware	72	static
 ../Core/Src/lt7911ux.c:548:6:LT7911_WriteCRC	8	static
-../Core/Src/lt7911ux.c:403:6:LT7911_WriteFirmware	48	static
+../Core/Src/lt7911ux.c:403:6:LT7911_WriteFirmware	40	static
 ../Core/Src/lt7911ux.c:591:6:LT7911_ReadbackAllFlash	64	static
 ../Core/Src/lt7911ux.c:783:14:BitsReverse	12	static
 ../Core/Src/lt7911ux.c:806:14:GetCRC	56	static

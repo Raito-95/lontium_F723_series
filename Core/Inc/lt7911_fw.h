@@ -7,7 +7,7 @@ extern "C" {
 #endif
 
 #define version 0x10
-#define LT7911_DEMO_FW_LENGTH 46729
+#define LT7911_DEMO_FW_LENGTH 49681
 extern const unsigned char LT7911_FW[LT7911_DEMO_FW_LENGTH];
 
 #ifdef __cplusplus
