@@ -1,6 +1,0 @@
-../Core/Src/al3010.c:25:19:AL3010_Init	10
-../Core/Src/al3010.c:93:19:AL3010_ReadData	1
-../Core/Src/al3010.c:112:19:AL3010_ReadData_ISR	2
-../Core/Src/al3010.c:137:6:ALS_SendReport_FS	1
-../Core/Src/al3010.c:156:26:AL3010_WriteRegister	1
-../Core/Src/al3010.c:165:26:AL3010_ReadRegisters	1
